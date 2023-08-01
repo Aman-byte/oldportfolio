@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<section class="mainsection">
+
+  <div class="navbar">
+    <!-- Logo (you can replace the src attribute with your logo image) -->
+    <img src="AP.png" alt="Logo" class="logo">
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger-menu" onclick="toggleNav()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#my-expertise">My Expertise</a></li>
+      <li><a href="#my-portfolio">My Portfolio</a></li>
+      <li><a href="#contact-me">Contact Me</a></li>
+    </ul>
+    <!-- "Hire Me" Button -->
+    <button class="hire-btn">Hire Me</button>
+  </div>
+
+
+  <!-- Introduction Section -->
+  <section class="introduction">
+    <div class="leftside">
+      <h1 id="home">I'm Aman <br> Pratap Singh</h1> <br><br>
+      <p>I am an enthusiastic Computer Science student who is
+        passionate about problem-solving and logical reasoning,
+        dedicated to mastering data structures, programming
+        languages, and cutting-edge technologies, and actively seeks
+        opportunities for teamwork and collaboration in order to make a
+        lasting impact in the world of technology with my unwavering
+        determination and continuous pursuit of knowledge.</p> <br>
+
+        <button class="hire-btn"><a href="#about">Learn more </a></button>
+    </div>
+    <div class="rightside">
+      <img src="transparentPortfolio.png" alt="Profile Picture" class="image">
+    </div>
+  </section> <br><br><br><br>
+
+
+
+  <!-- About Me Section -->
+  <h1 id="about">About me</h1> <br><br><br>
+  <section class="about-me">
+      <div class="leftside">
+      <h2>Aman Pratap Singh:
+        Driven Computer
+        Science Student
+        Passionate about
+        Problem-Solving and
+        Technology Innovation</h2> <br>
+      <p>Aman Pratap Singh is a highly motivated and dedicated Computer Science
+        student who possesses a strong passion for problem-solving and logical
+        reasoning. They have a keen interest in mastering data structures, programming
+        languages, and staying updated with the latest technologies. Aman actively
+        participates in personal coding projects and actively seeks out opportunities for
+        teamwork and collaboration. With an unwavering determination and a thirst for
+        knowledge, they aspire to make a lasting impact in the world Of technology.</p> <br> <br>
+
+        <button class="hire-btn"><a href="#contact-me">Chat with me </a></button>
+    </div>
+    <div class="rightside">
+      <img src="giff.gif" alt="Gif" class="gif">
+    </div>
+  </section> <br>
+
+  <!-- My Expertise Section -->
+  <h1 id="my-expertise">My Expertise</h1> <br>
+  <section class="my-expertise">
+    <div class="leftside">
+      <p>
+        I am proficient in a variety of web development technologies, including HTML, CSS, Figma, Webflow, JavaScript, and Java. My expertise in these languages and tools allows me to craft visually appealing and interactive websites that cater to modern user expectations. I particularly enjoy the design aspect of web development, and I take great pleasure in creating aesthetically pleasing user interfaces. Currently, I am focused on enhancing my skills in User Experience (UX) and User Interface (UI) design, as I believe that seamless and intuitive interfaces play a pivotal role in providing a delightful user experience. With a passion for web design and a commitment to continuous learning, I am eager to contribute innovative and user-centric solutions to the digital world.</p>
+    </div>
+    <div class="rightside">
+      <img src="expertise_picture.jpg" alt="Expertise Picture">
+    </div>
+  </section> <br>
+
+  <!-- My Portfolio Section -->
+  <h1 id="my-portfolio">My Portfolio</h1> <br>
+  <section class="my-portfolio">
+   
+    <div class="portfolio-images">
+      <img src="art.jpg" alt="Portfolio Image 1">
+      <img src="art2.jpeg" alt="Portfolio Image 2">
+      <img src="art3.jpeg" alt="Portfolio Image 3">
+    </div>
+  </section> <br>
+
+  <!-- Contact Me Section -->
+  <h1 id="contact-me">Contact Me</h1> <br>
+  <section class="contact-me">
+    <div class="leftside">
+      
+      <p>If you have any questions or inquiries, feel free to contact me at:</p>
+      <p>ContactEmail@example.com</p>
+    </div>
+    <div class="rightside">
+      <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </section> <br>
+
+</section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 Aman Pratap Singh. All rights reserved.</p>
+      </div>
+  </footer>
+  
+  
+  <script>
+    // Function to toggle the navigation links on mobile
+    function toggleNav() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
