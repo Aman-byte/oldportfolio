@@ -386,9 +386,10 @@ body.dark-mode .nav-links li a {
   color: #ffffff;
 }
 
-body.dark-mode .footer-content {
-  color: #ffffff;
-  background-color: #333;
+body.dark-mode footer {
+  color: #333;
+  background-color: white;
+  width: 100%;
 }
 
 body.dark-mode {
