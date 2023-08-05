@@ -10,27 +10,27 @@
 
 <section class="mainsection">
 
-  <div class="navbar">
-    <!-- Logo (you can replace the src attribute with your logo image) -->
+    <div class="navbar">
+   
     <img src="AP.png" alt="Logo" class="logo">
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger-menu" onclick="toggleNav()">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
+    
     <!-- Navigation Links -->
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#my-expertise">My Expertise</a></li>
-      <li><a href="#my-portfolio">My Portfolio</a></li>
+      <li><a href="#my-portfolio">My Projects</a></li>
       <li><a href="#contact-me">Contact Me</a></li>
     </ul>
     <!-- "Hire Me" Button -->
     <button class="hire-btn">Hire Me</button>
+    <!-- Hamburger Menu Icon -->
+  <div class="hamburger-menu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
-
-
+  </div> <hr>
+  
   <!-- Introduction Section -->
   <section class="introduction">
     <div class="leftside">
@@ -48,49 +48,48 @@
     <div class="rightside">
       <img src="transparentPortfolio.png" alt="Profile Picture" class="image">
     </div>
-  </section> <br><br><br><br>
-
-
+  </section> <hr><br>
 
   <!-- About Me Section -->
-  <h1 id="about">About me</h1> <br><br><br>
+  <div class="sectionabout">
+  <h1 id="about">About me</h1> <br><br>
   <section class="about-me">
       <div class="leftside">
-      <h2>Aman Pratap Singh:
-        Driven Computer
+      <h2>Driven Computer
         Science Student
         Passionate about
         Problem-Solving and
         Technology Innovation</h2> <br>
-      <p>Aman Pratap Singh is a highly motivated and dedicated Computer Science
+      <p>I am a highly motivated and dedicated Computer Science
         student who possesses a strong passion for problem-solving and logical
-        reasoning. They have a keen interest in mastering data structures, programming
-        languages, and staying updated with the latest technologies. Aman actively
-        participates in personal coding projects and actively seeks out opportunities for
+        reasoning. I have a keen interest in mastering data structures, programming
+        languages, and staying updated with the latest technologies. I actively
+        participate in personal coding projects and actively seeks out opportunities for
         teamwork and collaboration. With an unwavering determination and a thirst for
-        knowledge, they aspire to make a lasting impact in the world Of technology.</p> <br> <br>
+        knowledge, they aspire to make a lasting impact in the world of technology.</p> <br> <br>
 
         <button class="hire-btn"><a href="#contact-me">Chat with me </a></button>
     </div>
     <div class="rightside">
-      <img src="giff.gif" alt="Gif" class="gif">
+      <img src="giff.gif" alt="Gif" class="image">
     </div>
-  </section> <br>
+  </section>
+</div> <hr> <br>
 
   <!-- My Expertise Section -->
   <h1 id="my-expertise">My Expertise</h1> <br>
   <section class="my-expertise">
     <div class="leftside">
       <p>
-        I am proficient in a variety of web development technologies, including HTML, CSS, Figma, Webflow, JavaScript, and Java. My expertise in these languages and tools allows me to craft visually appealing and interactive websites that cater to modern user expectations. I particularly enjoy the design aspect of web development, and I take great pleasure in creating aesthetically pleasing user interfaces. Currently, I am focused on enhancing my skills in User Experience (UX) and User Interface (UI) design, as I believe that seamless and intuitive interfaces play a pivotal role in providing a delightful user experience. With a passion for web design and a commitment to continuous learning, I am eager to contribute innovative and user-centric solutions to the digital world.</p>
+        I am proficient in a variety of web development technologies, including HTML, CSS, JavaScript, and Java. My expertise in these languages and tools allows me to craft visually appealing and interactive websites that cater to modern user expectations. I particularly enjoy the design aspect of web development, and I take great pleasure in creating aesthetically pleasing user interfaces. Currently, I am focused on enhancing my skills in User Experience (UX) and User Interface (UI) design, by learning Figma, Webflow as I believe that seamless and intuitive interfaces play a pivotal role in providing a delightful user experience. With a passion for web design and a commitment to continuous learning, I am eager to contribute innovative and user-centric solutions to the digital world.</p>
     </div>
     <div class="rightside">
       <img src="expertise_picture.jpg" alt="Expertise Picture">
     </div>
-  </section> <br>
+  </section> <hr><br>
 
   <!-- My Portfolio Section -->
-  <h1 id="my-portfolio">My Portfolio</h1> <br>
+  <h1 id="my-projects">My Projects</h1> <br>
   <section class="my-portfolio">
    
     <div class="portfolio-images">
@@ -98,7 +97,7 @@
       <img src="art2.jpeg" alt="Portfolio Image 2">
       <img src="art3.jpeg" alt="Portfolio Image 3">
     </div>
-  </section> <br>
+  </section> <hr><br>
 
   <!-- Contact Me Section -->
   <h1 id="contact-me">Contact Me</h1> <br>
@@ -106,20 +105,20 @@
     <div class="leftside">
       
       <p>If you have any questions or inquiries, feel free to contact me at:</p>
-      <p>ContactEmail@example.com</p>
+      <p><strong>amansagar1901@gmail.com</strong></p> <br>
     </div>
     <div class="rightside">
       <form>
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required style="height: 25px;">
 
         <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required style="height: 25px;>
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea id="message" name="message" required ></textarea>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" style="height: 30px;">
       </form>
     </div>
   </section> <br>
@@ -131,14 +130,14 @@
       <p>&copy; 2023 Aman Pratap Singh. All rights reserved.</p>
       </div>
   </footer>
+
+<script>// JavaScript to handle the hamburger menu toggle
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const navLinks = document.querySelector(".nav-links");
   
-  
-  <script>
-    // Function to toggle the navigation links on mobile
-    function toggleNav() {
-      var navLinks = document.getElementById("navLinks");
-      navLinks.classList.toggle("show");
-    }
+  hamburgerMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-active");
+  });
   </script>
 
 </body>
