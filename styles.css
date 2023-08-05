@@ -12,21 +12,7 @@ body {
   background-color: #fffdf9; /* Set the background color of the entire webpage */
   text-align: justify;
 }
-
-/* Define @font-face rule for Montserrat */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('Montserrat/static/Montserrat-Regular.ttf') format('ttf'), /* Add other formats if needed */
-       /* Add the font variations (bold, italic, etc.) with appropriate URLs */
-}
-
-/* Define @font-face rule for Nunito */
-@font-face {
-  font-family: 'Nunito Sans';
-  src: url('Nunito_Sans/static/NunitoSans_10pt-Regular.ttf') format('ttf'), /* Add other formats if needed */
-       /* Add the font variations (bold, italic, etc.) with appropriate URLs */
-}
-
+                
 
 .mainsection {
   padding: 0 20px;
@@ -42,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 h1 { font-size: 50px; text-align: center; }
-h2 { font-size: 30px; }
+h2 { font-size: 40px; text-align: center;}
 h3 { font-size: 24px; }
 h4 { font-size: 20px; }
 h5 { font-size: 18px; }
@@ -51,7 +37,6 @@ h6 { font-size: 16px; }
 
 /* Navigation Menu styles */
 .nav-menu {
-  font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #cccccc; /* Set the normal text color to light gray (#cccccc) */
@@ -73,7 +58,6 @@ a:hover {
 
 /* Footer styles */
 footer {
-  font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
   color: #cccccc; /* Set footer text color to light gray (#cccccc) */
   background-color: #212121; /* Set footer background color to dark gray (#212121) */
@@ -289,6 +273,7 @@ footer a:hover {
 @media screen and (max-width: 768px) {
   .mainsection {
     padding: 0 20px;
+    margin-top: 20px;
   }
 
   .introduction, .about-me, .my-expertise, .my-portfolio, .contact-me {
@@ -317,6 +302,7 @@ footer a:hover {
 .hamburger-menu {
   display: none;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .line {
@@ -344,7 +330,7 @@ footer a:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100px; /* Adjust this value as needed based on your header's height */
+    top: 130px; /* Adjust this value as needed based on your header's height */
     left: 0;
     width: 100%;
     background-color: #f9f9f9;
@@ -366,4 +352,50 @@ footer a:hover {
   .hire-btn{
     display: none;
   }
+
+  body.dark-mode .nav-links {
+    background-color: #333;}
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #212121;
+  color: #cccccc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .nav-menu {
+  color: #ffffff;
+}
+
+body.dark-mode .hire-btn {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+body.dark-mode .nav-links li a {
+  color: #ffffff;
+}
+
+body.dark-mode .footer-content {
+  color: #ffffff;
+  background-color: #333;
+}
+
+body.dark-mode {
+  background-color: #212121;
+  color: #cccccc;
+}
+
+body .dark-mode .line{
+  color: white;
 }
