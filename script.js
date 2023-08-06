@@ -1,28 +1,402 @@
-  // Function to toggle dark mode
-  function toggleDarkMode() {
-    const body = document.body;
-    const logoLight = document.querySelector('.logo-light');
-    const logoDark = document.querySelector('.logo-dark');
+/* Reset some default styles to ensure consistency */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
-    if (body.classList.contains('dark-mode')) {
-      logoLight.style.display = 'none'; // Hide logo for light mode
-      logoDark.style.display = 'block'; // Show logo for dark mode
-    } else {
-      logoLight.style.display = 'block'; // Show logo for light mode
-      logoDark.style.display = 'none'; // Hide logo for dark mode
-    }
+/* Set the base font and background color */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #fffdf9; /* Set the background color of the entire webpage */
+  text-align: justify;
+}
+                
 
-    body.classList.toggle('dark-mode');
+.mainsection {
+  padding: 0 20px;
+  padding-top: 20px;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #212121; /* Set the heading color to dark gray (#212121) */
   }
 
-  // Event listener to toggle dark mode when 'Right Control' key is pressed
-  document.addEventListener('keydown', function (event) {
-    if (event.code === 'ControlRight') {
-      toggleDarkMode();
-    }
-  });
+h1 { font-size: 50px; text-align: center; }
+h2 { font-size: 40px; text-align: center;}
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
 
-  // Show reminder message as an alert
-  window.onload = function () {
-    alert("Reminder: To view in dark mode, press the 'Right Control' key on your keyboard.");
-  };
+
+/* Navigation Menu styles */
+.nav-menu {
+  font-size: 18px;
+  font-weight: 500;
+  color: #cccccc; /* Set the normal text color to light gray (#cccccc) */
+}
+
+#home{
+  font-size: 65px;
+}
+
+/* Links styles */
+a {
+  color:white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+  font-size: 14px;
+  color: #cccccc; /* Set footer text color to light gray (#cccccc) */
+  background-color: #212121; /* Set footer background color to dark gray (#212121) */
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Style the navigation bar */
+.navbar {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  color: #212121; /* Set the navigation link color to dark gray (#212121) */
+  text-decoration: none;
+}
+
+.logo {
+  height: 80px;
+}
+
+.hire-btn {
+  background-color: #2270e2; /* Set the button background color to blue (#2270e2) */
+  color: #fff; /* Set button text color to white (#fff) */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Introduction Section */
+.introduction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduction h1{
+  text-align: left;
+}
+
+.introduction .leftside{
+  padding-top: 100px;
+}
+
+.leftside, .rightside {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.image{
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 95%;
+}
+/* About Me Section */
+.about-me {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gif {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* My Expertise Section */
+.my-expertise {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* My Portfolio Section */
+
+.my-portfolio img {
+  max-width: 100%;
+}
+
+/* Contact Me Section */
+.contact-me {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-me form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+.contact-me label {
+  margin-bottom: 5px;
+}
+
+.contact-me input,
+.contact-me textarea {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-me input[type="submit"] {
+  background-color: #ff0000; /* Set the button background color to red (#ff0000) */
+  color: #fff; /* Set button text color to white (#fff) */
+  border: none;
+  cursor: pointer;
+  padding: 0, 20px;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff; /* Set footer link color to white (#fff) */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Add more specific classes if needed */
+.leftside {
+  width: 50%;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .mainsection {
+    padding: 0 20px;
+  }
+
+  .introduction, .about-me, .my-expertise, .my-portfolio, .contact-me {
+    flex-direction: column;
+  }
+
+  .leftside, .rightside, .image, .gif, .my-expertise, .my-portfolio, .contact-me, .introduction, .about-me {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .hire-btn {
+    margin-top: 20px;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.logo {
+  height: 80px;
+}
+
+.hire-btn {
+  background-color: #2270e2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Adjust styles for screens with a maximum width of 768px or smaller (Mobile Phones) */
+@media screen and (max-width: 768px) {
+  .mainsection {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  .introduction, .about-me, .my-expertise, .my-portfolio, .contact-me {
+    flex-direction: column;
+  }
+
+  .leftside, .rightside, .image, .gif, .my-expertise, .my-portfolio, .contact-me, .introduction, .about-me {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .hire-btn {
+    margin-top: 20px;
+  }
+
+}
+/* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Navigation links styles */
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 10px;
+}
+
+/* Styles for screens less than 786px */
+@media screen and (max-width: 786px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 130px; /* Adjust this value as needed based on your header's height */
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+
+  .nav-links li {
+    padding: 15px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Show the navigation links when hamburger menu is clicked */
+  .nav-active {
+    display: flex;
+  }
+
+  .hire-btn{
+    display: none;
+  }
+
+  body.dark-mode .nav-links {
+    background-color: #333;}
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #212121;
+  color: #cccccc;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .nav-menu {
+  color: #ffffff;
+}
+
+body.dark-mode .hire-btn {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+body.dark-mode .nav-links li a {
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  color: #333;
+  background-color: white;
+  width: 100%;
+}
+
+body.dark-mode {
+  background-color: #212121;
+  color: #cccccc;
+}
+
+body .dark-mode .line{
+  color: white;
+}
