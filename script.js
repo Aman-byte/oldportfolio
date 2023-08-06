@@ -1,4 +1,11 @@
-  // Function to toggle dark mode
+// JavaScript to handle the hamburger menu toggle
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navLinks = document.querySelector(".nav-links");
+
+hamburgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("nav-active");
+});
+// Function to toggle dark mode
   function toggleDarkMode() {
     const body = document.body;
     const logoLight = document.querySelector('.logo-light');
