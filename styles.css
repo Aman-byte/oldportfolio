@@ -397,6 +397,6 @@ body.dark-mode {
   color: #cccccc;
 }
 
-body .dark-mode .line{
-  color: white;
+body.dark-mode .line{
+  background-color: white;
 }
