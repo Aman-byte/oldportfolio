@@ -74,7 +74,7 @@ window.onload = function() {
     // Show reminder message as an alert
 
       alert("Reminder: To view in dark mode, press the 'Right Control' key on your keyboard. Or the toggle key at the bottom.");
-      
+
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
@@ -89,3 +89,54 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid black}";
     document.body.appendChild(css);
 };
+
+//cursor js
+const degreeToRadian = (angle) => {
+  return angle * (Math.PI / 180);
+};
+
+const radius = 48;
+const diameter = radius * 2;
+
+const customCursor = document.querySelector("#custom-cursor");
+customCursor.style.width = `${diameter}px`;
+customCursor.style.height = `${diameter}px`;
+
+const text = "AMAN — AMAN — AMAN — AMAN — ";
+const characters = text.split("");
+
+const deltaAngle = 360 / characters.length;
+const characterOffsetAngle = 8;
+let currentAngle = -90;
+
+characters.forEach((character, index) => {
+  const span = document.createElement("span");
+  span.innerText = character;
+  const xPos = radius * (1 + Math.cos(degreeToRadian(currentAngle)));
+  const yPos = radius * (1 + Math.sin(degreeToRadian(currentAngle)));
+
+  const transform = `translate(${xPos}px, ${yPos}px)`;
+  const rotate = `rotate(${(index * deltaAngle) + characterOffsetAngle}deg)`;
+  span.style.transform = `${transform} ${rotate}`;
+
+  currentAngle += deltaAngle;
+  customCursor.appendChild(span);
+});
+
+// Create a center dot
+const centerDot = document.createElement("span");
+centerDot.innerText = "✧";
+centerDot.style.position = "absolute";
+centerDot.style.top = "50%";
+centerDot.style.left = "50%";
+centerDot.style.transform = "translate(-50%, -50%)";
+centerDot.style.fontSize = "20px";
+customCursor.appendChild(centerDot);
+
+// Update cursor position based on mouse movement
+document.addEventListener("mousemove", (event) => {
+  customCursor.style.left = `${event.clientX}px`;
+  customCursor.style.top = `${event.clientY}px`;
+});
+
+//cursor js ends
