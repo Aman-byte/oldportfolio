@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
   background-color: #fffdf9; /* Set the background color of the entire webpage */
   text-align: justify;
+  
 }
                 
 
@@ -399,4 +400,9 @@ body.dark-mode {
 
 body.dark-mode .line{
   background-color: white;
+}
+
+.typewrite{
+  font-size: 28px; 
+  color: black;
 }
